@@ -30,23 +30,37 @@ st.set_page_config(
 st.markdown(
 	"""
 	<style>
-	  .stApp { background: #f5f7fb; }
-	  [data-testid="stSidebar"] { background: #101b32; }
-	  [data-testid="stSidebar"] * { color: #f4f7ff; }
-	  .main .block-container { max-width: 1440px; padding-top: 2rem; padding-bottom: 3rem; }
-	  .hero { padding: 1.6rem 1.8rem; border-radius: 18px; color: white;
-			  background: linear-gradient(115deg,#15274b 0%,#2853a5 58%,#6087df 100%);
-			  margin-bottom: 1.3rem; box-shadow: 0 12px 32px rgba(30,58,115,.15); }
-	  .hero h1 { margin: 0 0 .35rem 0; font-size: 2rem; }
-	  .hero p { margin: 0; opacity: .86; font-size: 1rem; }
-	  div[data-testid="stMetric"] { background: white; border: 1px solid #e7ebf3;
-		  padding: 1rem 1.1rem; border-radius: 14px; box-shadow: 0 5px 18px rgba(26,43,77,.04); }
-	  div[data-testid="stMetricLabel"] p { color: #66738c; }
-	  .section-note { color: #65718a; margin-top: -.45rem; }
-	  .segment-card { background: white; border: 1px solid #e7ebf3; border-radius: 14px;
-		  padding: 1rem 1.1rem; margin: .45rem 0; }
-	  .small-muted { color: #65718a; font-size: .92rem; }
-	  .stPlotlyChart { background: white; border: 1px solid #e7ebf3; border-radius: 14px; padding: .2rem; }
+	  .main .block-container { max-width: 1200px; padding-top: 2rem; padding-bottom: 3rem; }
+	  .hero { padding: 2rem; border-radius: 16px; color: white;
+			  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			  margin-bottom: 2rem; box-shadow: 0 10px 20px rgba(118, 75, 162, 0.2); text-align: center; }
+	  .hero h1 { margin: 0 0 0.5rem 0; font-size: 2.5rem; font-weight: 700; }
+	  .hero p { margin: 0; font-size: 1.1rem; opacity: 0.9; }
+	  div[data-testid="stMetric"] { 
+		  background-color: var(--secondary-background-color); 
+		  border: 1px solid rgba(118, 75, 162, 0.1);
+		  padding: 1.2rem; border-radius: 12px; 
+		  box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+		  transition: transform 0.2s ease, box-shadow 0.2s ease;
+	  }
+	  div[data-testid="stMetric"]:hover {
+		  transform: translateY(-2px);
+		  box-shadow: 0 6px 12px rgba(118, 75, 162, 0.15);
+	  }
+	  div[data-testid="stMetricLabel"] p { font-size: 1rem; font-weight: 500; opacity: 0.8; }
+	  div[data-testid="stMetricValue"] { font-size: 1.8rem; font-weight: 700; color: var(--primary-color); }
+	  .segment-card { 
+		  background-color: var(--secondary-background-color); 
+		  border: 1px solid rgba(118, 75, 162, 0.1); 
+		  border-radius: 12px;
+		  padding: 1.5rem; margin: 0.8rem 0; 
+		  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+		  transition: transform 0.2s ease;
+	  }
+	  .segment-card:hover { transform: translateX(4px); border-color: rgba(118, 75, 162, 0.4); }
+	  .segment-card strong { color: var(--primary-color); font-size: 1.1rem; }
+	  .small-muted { opacity: 0.7; font-size: 0.95rem; margin-top: 0.5rem; display: block; line-height: 1.5; }
+	  .stPlotlyChart { background-color: var(--secondary-background-color); border: 1px solid rgba(118, 75, 162, 0.1); border-radius: 16px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
 	</style>
 	""",
 	unsafe_allow_html=True,
